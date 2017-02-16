@@ -6,9 +6,9 @@
 %MACRO generateIndividualCAI;
 DATA Proper_Input;
 	RETAIN TMPID;
-	SET ¬Yёк®Ж¶°;
-	BY §P§OДж¦м;
-	IF FIRST.§P§OДж¦м THEN TMPID+1; 
+	SET жџђиі‡ж–™й›†;
+	BY жџђж¬„дЅЌ;
+	IF FIRST.жџђж¬„дЅЌ THEN TMPID+1; 
 	OUTPUT;
 RUN;
 PROC SQL NOPRINT;
