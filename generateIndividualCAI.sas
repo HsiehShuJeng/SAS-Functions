@@ -17,7 +17,7 @@ QUIT;
 %DO dynamicNumber=1 %TO &totalCustomerNumber;
 PROC SGPLOT DATA=Proper_Input(WHERE=(TMPID=&dynamicNumber));
 	TITLE TMPID=&dynamicNumber;
-	VLINE n/RESPONSE=dif_day;
+	VLINE X軸變數/RESPONSE=y軸變數;
 RUN;
 %END;
 %MEND;
