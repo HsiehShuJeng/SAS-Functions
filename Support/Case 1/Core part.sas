@@ -19,5 +19,5 @@ DATA Outcome(DROP=Column2 Column3 Column1 SerialNO);
 				OTHERWISE 清單=CATS(清單, Column1,",");
 			END;
 		END;
-	ELSE DO; 群組=CATS(Column2, Column3); 清單=CATS(清單, Column1); OUTPUT; END;
+	ELSE DO; 群組=CATS(Column2, Column3); 清單=CATS(?M?? Column1); OUTPUT; END;
 RUN;
