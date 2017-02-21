@@ -1,6 +1,6 @@
 /*
 	This is for forming a SAS SQL query which
-	may contains a host of 'CONTAINS' with ease.
+	may contain a host of 'CONTAINS' with ease.
 */
 DATA Sample;
 	INPUT query $10.;
