@@ -6,18 +6,18 @@
 	in a record at most at once.
 */
 DATA Outcome(DROP=Column2 Column3 Column1 SerialNO);
-	RETAIN ¸s²Õ ²M³æ;
-	FORMAT ¸s²Õ $13. ²M³æ $419. ²M³æ­Ó¼Æ 8.0;
-	SET WORK.§Ç¦C«áµ²ªG(KEEP=SerialNO Column1 Column2 Column3);
+	RETAIN ç¾¤çµ„ æ¸…å–®;
+	FORMAT ç¾¤çµ„ $13. æ¸…å–® $419. æ¸…å–®å€‹æ•¸ 8.0;
+	SET WORK.åºåˆ—å¾Œçµæœ(KEEP=SerialNO Column1 Column2 Column3);
 	BY Column2 Column3;
-	²M³æ­Ó¼Æ+1;
+	æ¸…å–®å€‹æ•¸+1;
 	IF (NOT LAST.Column3) THEN
 		DO;
 			SELECT(MOD(SerialNO,20));
-				WHEN (0) DO; ¸s²Õ=CATS(Column2, Column3); ²M³æ=CATS(²M³æ, Column1); OUTPUT; END;
-				WHEN (1) DO; ²M³æ=CATS(Column1,","); ²M³æ­Ó¼Æ=1; END;
-				OTHERWISE ²M³æ=CATS(²M³æ, Column1,",");
+				WHEN (0) DO; ç¾¤çµ„=CATS(Column2, Column3); æ¸…å–®=CATS(æ¸…å–®, Column1); OUTPUT; END;
+				WHEN (1) DO; æ¸…å–®=CATS(Column1,","); æ¸…å–®å€‹æ•¸=1; END;
+				OTHERWISE æ¸…å–®=CATS(æ¸…å–®, Column1,",");
 			END;
 		END;
-	ELSE DO; ¸s²Õ=CATS(Column2, Column3); ²M³æ=CATS(?M?? Column1); OUTPUT; END;
+	ELSE DO; ç¾¤çµ„=CATS(Column2, Column3); æ¸…å–®=CATS(æ¸…å–®, Column1); OUTPUT; END;
 RUN;
