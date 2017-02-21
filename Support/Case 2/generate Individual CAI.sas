@@ -6,9 +6,9 @@
 %MACRO generateIndividualCAI;
 DATA Proper_Input;
 	RETAIN TMPID;
-	SET 某資料集;
-	BY 某欄位
-	IF FIRST.某欄位 THEN TMPID+1; 
+	SET "某資料集"N;
+	BY "某欄位"N;
+	IF FIRST."某欄位"N THEN TMPID+1; 
 	OUTPUT;
 RUN;
 PROC SQL NOPRINT;
@@ -17,7 +17,7 @@ QUIT;
 %DO dynamicNumber=1 %TO &totalCustomerNumber;
 PROC SGPLOT DATA=Proper_Input(WHERE=(TMPID=&dynamicNumber));
 	TITLE TMPID=&dynamicNumber;
-	VLINE X軸變數/RESPONSE=y軸變數
+	VLINE 'X軸變數'/RESPONSE='y軸變數';
 RUN;
 %END;
 %MEND;
