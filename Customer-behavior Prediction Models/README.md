@@ -1,0 +1,1 @@
+Those models can predict customer's repetitive purchasing times, corresponding contribution, and some of them can predict the first purchasing timing in a specific timespan of the future.
