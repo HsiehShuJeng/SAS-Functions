@@ -1,5 +1,6 @@
 Fulfill miscellaneous requirements from inner business units to lovely academic cooperation. What a wonderful life :)
 Let's take a look part of the work, those were requested only in Q4 last year
+
 1. 建立給產學合作對象之東森資料匯出系統
 
 2. 從ETU之LOG分析東森和森森大網流量來源並匯出統計數據與名單給***副總
