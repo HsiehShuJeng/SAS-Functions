@@ -6,9 +6,9 @@
 %MACRO generateIndividualCAI;
 DATA Proper_Input;
 	RETAIN TMPID;
-	SET жџђиі‡ж–™й›†;
-	BY жџђж¬„дЅЌ;
-	IF FIRST.жџђж¬„дЅЌ THEN TMPID+1; 
+	SET ¬Yёк®Ж¶°;
+	BY ¬YДж¦м
+	IF FIRST.¬YДж¦м THEN TMPID+1; 
 	OUTPUT;
 RUN;
 PROC SQL NOPRINT;
@@ -17,7 +17,7 @@ QUIT;
 %DO dynamicNumber=1 %TO &totalCustomerNumber;
 PROC SGPLOT DATA=Proper_Input(WHERE=(TMPID=&dynamicNumber));
 	TITLE TMPID=&dynamicNumber;
-	VLINE Xи»ёи®Љж•ё/RESPONSE=yи»ёи®Љж•ё;
+	VLINE X¶bЕЬјЖ/RESPONSE=y¶bЕЬјЖ
 RUN;
 %END;
 %MEND;
